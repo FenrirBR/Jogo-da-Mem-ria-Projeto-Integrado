@@ -1,0 +1,78 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    border: 10px solid rgb(17, 17, 17);
+    height: 650px;
+    width: 650px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: 4em;
+    background-color: #4a72a7;
+    perspective: 1000px;
+}
+
+.carta{
+    border: 10px solid #ea7442;
+    width: 120px;
+    height: 120px;
+    background-color: #6396d8;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: #4e438d;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+
+.frente, 
+.verso {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .carta:hover{
+    transform: scale(1.1);
+    transition: .2s;
+  }
+
+  .carta:active{
+    transform: scale(0.97);
+    transition: transform 0.2s;
+
+  }
+ 
+
+  .carta.anima{
+    transform: rotateY(180deg);
+  }
+
+  .frente {
+    transform: rotateY(180deg);
+  }
+
+  #BotaoEmbaralhar{
+    margin-left: 41%;
+    background-color: #1C7CCC;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #ea7442;
+    border-width: 5px;
+  }
